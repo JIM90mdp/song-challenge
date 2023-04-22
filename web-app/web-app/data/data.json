@@ -1,0 +1,20 @@
+{
+  "allChallenges": [
+    {
+      "id": "1",
+      "content": "Dato 1: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+    },
+    {
+      "id": "2",
+      "content": "Dato 2: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+    },
+    {
+      "id": "3",
+      "content": "Dato 3: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+    },
+    {
+      "id": "4",
+      "content": "Dato 4: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+    }
+  ]
+}
