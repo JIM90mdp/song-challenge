@@ -17,7 +17,7 @@ export default function Home({ data }) {
   );
 }
 
-export const getServerSideProps = async (context) => {
+export const getServerSideProps = async () => {
   const res = await fetch("https://song-challenge.fly.dev/api/song-challenge/");
   const challenges = await res.json();
 
