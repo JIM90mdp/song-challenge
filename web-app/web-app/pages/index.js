@@ -1,9 +1,6 @@
-import { Inter } from "next/font/google";
 import Head from "next/head";
 import HomePage from "@component/components/homePage/homePage";
 
-
-//destructuring de la data que retorna la función de la linea 23.
 export default function Home({ data }) {
   // console.log("data:", data);
 
@@ -20,15 +17,13 @@ export default function Home({ data }) {
   );
 }
 
-//fetch a base de datos interna: ../data/data.json
-export async function getServerSideProps() {
-  const { allChallenges } = await import("../data/data.json");
-
-  // console.log("allChallenges: ", allChallenges)
+export const getServerSideProps = async (context) => {
+  const res = await fetch("https://song-challenge.fly.dev/api/song-challenge/");
+  const challenges = await res.json();
 
   return {
     props: {
-      data: allChallenges,
+      data: challenges,
     },
   };
-}
+};
