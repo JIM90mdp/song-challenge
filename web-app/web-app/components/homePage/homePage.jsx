@@ -1,21 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import ChallengeCard from "../challengeCard/challengeCard";
 import { motion } from "framer-motion";
+import AppContext from "../context/appContext";
+
 const HomePage = ({ data }) => {
-  // console.log("data: ", data)
+  // console.log("data from HomePage: ", data)
+
+  const context = useContext(AppContext);
 
   const [textButton, setTextButton] = useState("Generar Challenge");
-  const [content, setContent] = useState("");
 
   const handleClick = () => {
     const randomElement = data[Math.floor(Math.random() * data.length)];
-    setContent(randomElement);
+    // console.log("randomElement from homePage: ", randomElement)
 
-    // console.log("randomElement: ", randomElement)
+    context.setSongContext(randomElement);
 
-    textButton === "Generate song idea"
-      ? setTextButton("Generate another song idea")
-      : setTextButton("Generate another song idea");
+    setTextButton("Generate another song idea");
   };
 
   return (
@@ -46,14 +47,15 @@ const HomePage = ({ data }) => {
         }}
       >
         <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded p-5 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
           onClick={handleClick}
+          className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded p-5 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
         >
           {textButton}
         </button>
       </motion.div>
 
-      <ChallengeCard data={content} />
+      {/* CHALLENGE CARD */}
+      <ChallengeCard />
     </div>
   );
 };

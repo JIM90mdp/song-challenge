@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const GenerarChallengeButton = ({data}) => {
+const GenerarChallengeButton = ({ data }) => {
   const [textButton, setTextButton] = useState("Generar Challenge");
 
   const handleClick = () => {
