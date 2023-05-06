@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}New Song Idea{% endblock title %}
+
+{% block content %}
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <!-- <img src="{% static 'images/logo.png' %}" class="img-fluid" alt="DjangoX logo"/> -->
+  <p>{{song}}</p>
+  <p class="lead">Click the button below to generate another random song idea.</p>
+  <form action="/song-idea/" method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-primary">Generate Song Idea</button>
+  </form>
+</div>
+{% endblock content %}
