@@ -18,3 +18,10 @@ class SongIdeaSerializer(serializers.ModelSerializer):
 
     def get_content(self, obj):
         return str(obj)
+
+
+class InstrumentSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Instrument
+        fields = '__all__'

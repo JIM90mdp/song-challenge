@@ -8,8 +8,8 @@ from rest_framework.response import Response
 from rest_framework import status
 
 from .helpers import generate_random_idea
-from .models import SongIdea
-from .serializers import SongIdeaSerializer, SongIdeaCreateSerializer
+from .models import SongIdea, Instrument
+from .serializers import SongIdeaSerializer, SongIdeaCreateSerializer, InstrumentSerializer
 
 
 def song_idea(request, pk=None):
@@ -51,3 +51,9 @@ class SongIdeaViewSet(viewsets.ModelViewSet):
         serializer = SongIdeaSerializer(instance)
         headers = self.get_success_headers(serializer.data)
         return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
+
+
+class InstrumentsViewSet(viewsets.ReadOnlyModelViewSet):
+
+    queryset = Instrument.objects.filter(is_active=True)
+    serializer_class = InstrumentSerializer
