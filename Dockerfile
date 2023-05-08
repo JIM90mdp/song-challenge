@@ -21,17 +21,19 @@ RUN mkdir -p /code
 WORKDIR /code
 
 # Install dependencies
-COPY requirements.txt /tmp/requirements.txt
+# COPY requirements.txt /tmp/requirements.txt
+COPY poetry.lock pyproject.toml /code/
 
 RUN set -ex && \
     pip install --upgrade pip && \
-    pip install -r /tmp/requirements.txt && \
-    rm -rf /root/.cache/
+    pip install 'poetry==1.4.2' && \
+    poetry config virtualenvs.create false && \
+    poetry install --only main
 
 # Copy local project
 COPY . /code/
-COPY --from=nextjs_app /home/node/app/out /code/static/web-app
-COPY --from=nextjs_app /home/node/app/out/*.html /code/templates/web-app
+COPY --from=nextjs_app /home/node/app/out/* /code/static/
+COPY --from=nextjs_app /home/node/app/out/index.html /code/templates/web-app
 # Expose port 8000
 EXPOSE 8000
 
