@@ -1,36 +1,27 @@
 import React, { useState, useContext, useEffect } from "react";
 import ChallengeCard from "../challengeCard/challengeCard";
 import { motion } from "framer-motion";
-import AppContext from "../context/appContext";
+import { useLocalStorage } from "../localStorage/useLocalStorage";
 
-const HomePage = ({ data }) => {
-  // console.log("data from HomePage: ", data)
-
-  const context = useContext(AppContext);
-
+const HomePage = () => {
   const [textButton, setTextButton] = useState("Generate Challenge");
 
-  const [challenge, setChallenge] = useState(null);
+  const [challenge, setChallenge] = useLocalStorage("songChallenge");
+
   const [isLoading, setLoading] = useState(false);
 
   const handleClick = () => {
-    // const randomElement = data[Math.floor(Math.random() * data.length)];
-    // // console.log("randomElement from homePage: ", randomElement)
-
-    // context.setSongContext(randomElement);
-   
     setLoading(true);
-    fetch("/api/song-challenge/", {method: "POST"})
+    fetch("https://song-challenge.fly.dev/api/song-challenge/", {
+      method: "POST",
+    })
       .then((res) => res.json())
       .then((challenge) => {
-        // setSongContext(challenge);
-        context.songContext = challenge
+        setChallenge(challenge.content);
         setLoading(false);
       });
-   
     // if (isLoading) return <p>Loading...</p>;
-    // if (!challenge) return <p>Click on </p>;
-
+    // if (!challenge) return <p>Click on </p>
     setTextButton("Generate another song idea");
   };
 
@@ -70,10 +61,9 @@ const HomePage = ({ data }) => {
       </motion.div>
 
       {/* CHALLENGE CARD */}
-      <ChallengeCard />
+      <ChallengeCard songChallenge={challenge} />
     </div>
   );
 };
-
 
 export default HomePage;

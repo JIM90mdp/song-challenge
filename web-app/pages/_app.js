@@ -3,7 +3,7 @@ import { useEffect, useState, createContext } from "react";
 import { Montserrat } from "@next/font/google";
 import MainLayout from "@component/components/layout/main-layout";
 import ReactLoading from "react-loading";
-import AppContext from "@component/components/context/appContext";
+import AppContext from "@component/components/localStorage/useLocalStorage";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -28,9 +28,7 @@ export default function App({ Component, pageProps }) {
             />
           </div>
         ) : (
-          <AppContext.Provider value={{ songContext, setSongContext }}>
-            <Component {...pageProps} />
-          </AppContext.Provider>
+          <Component {...pageProps} />
         )}
       </MainLayout>
     </div>
