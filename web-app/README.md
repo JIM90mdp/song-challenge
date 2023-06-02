@@ -44,16 +44,10 @@ $ npm run dev
 ## Technologies Used  (CUALES AGREGARÎAS?)
 
 - ![JavaScript](https://img.shields.io/badge/-JavaScript-696969?style=flat&logo=javascript)  
-- ![React](https://img.shields.io/badge/-React-696969?style=flat&logo=react)  
-- ![HTML5](https://img.shields.io/badge/-HTML5-696969?style=flat&logo=HTML5)  
-- ![CSS](https://img.shields.io/badge/-CSS-696969?style=flat&logo=CSS3&logoColor=1572B6)  
-- ![JQuery](https://img.shields.io/badge/jQuery-696969?style=flat&logo=jquery&logoColor=white)  
 - ![Node.js](https://img.shields.io/badge/-Node.js-696969?style=flat&logo=node.js)  
-- ![Express](https://img.shields.io/badge/-Express-696969?style=flat&logo=express)  
-- ![Tailwind](https://img.shields.io/badge/-Tailwind-696969?style=flat&logo=tailwind-css&logoColor=white)  
-- ![Bootstrap](https://img.shields.io/badge/Bootstrap-696969?style=flat&logo=bootstrap&logoColor=white)  
-- ![GitHub](https://img.shields.io/badge/-GitHub-696969?style=flat&logo=github)  
-- ![VS](https://img.shields.io/badge/-Visual_Studio_Code-696969?style=flat&logo=visual%20studio&logoColor=blue)
+- ![React](https://img.shields.io/badge/-React-696969?style=flat&logo=react)  
+- ![Nextjs]
+- ![Tailwind](https://img.shields.io/badge/-Tailwind-696969?style=flat&logo=tailwind-css&logoColor=white)   
 
 
 ⭐️ Link to our GitHub profile: [EstebanMDQ](https://github.com/EstebanMDQ) [JIM90mdp](https://github.com/JIM90mdp) 
