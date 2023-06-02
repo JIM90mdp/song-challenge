@@ -26,12 +26,14 @@ class Instrument(BaseModel):
 
 class Tempo(BaseModel):
     name = models.CharField(max_length=200)
+    is_active = models.BooleanField(default=True)
 
     def __str__(self):
         return f"{self.name} bpm"
 
 class Genre(BaseModel):
     name = models.CharField(max_length=200)
+    is_active = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name

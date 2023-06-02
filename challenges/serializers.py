@@ -25,3 +25,17 @@ class InstrumentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Instrument
         fields = '__all__'
+
+
+class GenreSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Genre
+        fields = '__all__'
+
+
+class TempoSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Tempo
+        fields = '__all__'
