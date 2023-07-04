@@ -48,8 +48,8 @@ $ npm run dev
 ⭐️ Link to our GitHub profile: [EstebanMDQ](https://github.com/EstebanMDQ) [JIM90mdp](https://github.com/JIM90mdp) 
 
 
-<p align="center"> 🤝🏻 &nbsp;Feel free to contact us through: </p>
-<p align="center">
-<a href="https://www.linkedin.com/in/mascarenhas-developer/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Juan%20Ignacio%20Mascarenhas-blue?style=flat-square&logo=linkedin"></a>
-<a href="mailto:juanignaciomascarenhas@gmail.com"><img alt="Outlook" src="https://img.shields.io/badge/MS-Outlook-blue?style=flat-square&logo=microsoft-outlook&logoColor=white"></a>
-</p>
+🤝🏻 Feel free to contact us through:
+
+[![LinkedIn - Juan Ignacio Mascarenhas](https://img.shields.io/badge/LinkedIn-Juan%20Ignacio%20Mascarenhas-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/mascarenhas-developer/)
+[![Email - juanignaciomascarenhas@gmail.com](https://img.shields.io/badge/MS-Outlook-blue?style=flat-square&logo=microsoft-outlook&logoColor=white)](mailto:juanignaciomascarenhas@gmail.com)
+
