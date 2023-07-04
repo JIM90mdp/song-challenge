@@ -41,7 +41,7 @@ $ npm run dev
 - ![JavaScript](https://img.shields.io/badge/-JavaScript-696969?style=flat&logo=javascript)  
 - ![Node.js](https://img.shields.io/badge/-Node.js-696969?style=flat&logo=node.js)  
 - ![React](https://img.shields.io/badge/-React-696969?style=flat&logo=react)  
-- ![Nextjs]
+- ![Next.js](https://img.shields.io/badge/-Next.js-696969?style=flat&logo=next.js)
 - ![Tailwind](https://img.shields.io/badge/-Tailwind-696969?style=flat&logo=tailwind-css&logoColor=white)   
 
 
