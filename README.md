@@ -1,20 +1,16 @@
-<h1 align="center">Welcome to Song Challenge 👋</h1>
+# Welcome to Song Challenge 👋
 
-<br>
-<h3>
-Song-Challenge" is a musician-focused application that tests their compositional skills with random prompts. It provides a creative platform for musicians to showcase their abilities by generating unique challenges and encouraging them to compose music based on those prompts. With "Song-Challenge," musicians can enhance their creativity, explore new musical territories, and share their compositions. Join the "Song-Challenge" community today, share your productions on your social media with the hashtag #song-challenge, and let your musical talent be heard worldwide.
-</h3>
-<br>
+Song-Challenge is a musician-focused application that tests their compositional skills with random prompts. It provides a creative platform for musicians to showcase their abilities by generating unique challenges and encouraging them to compose music based on those prompts. With Song-Challenge, musicians can enhance their creativity, explore new musical territories, and share their compositions. Join the Song-Challenge community today, share your productions on your social media with the hashtag #song-challenge, and let your musical talent be heard worldwide.
 
 ## Deploy
 
-Go: https://song-challenge.fly.dev/
+Go: [https://song-challenge.fly.dev/](https://song-challenge.fly.dev/)
 
 ## Getting Started
 
 Follow these basic steps to obtain a copy of the file locally on your computer.
 
-### Requirements (CUALES AGREGARÎAS?)
+### Requirements
 
 You will require the subsequent software to be installed on your computer:
 
@@ -36,10 +32,9 @@ $ cd web-app
 # Install dependencies
 $ npm i
 
-#To launch the server
+# To launch the server
 $ npm run dev
 ```
-
 
 ## Technologies Used  (CUALES AGREGARÎAS?)
 
