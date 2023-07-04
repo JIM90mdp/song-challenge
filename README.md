@@ -45,7 +45,7 @@ $ npm run dev
 - ![Tailwind](https://img.shields.io/badge/-Tailwind-696969?style=flat&logo=tailwind-css&logoColor=white)   
 
 
-⭐️ Link to our GitHub profile: [EstebanMDQ](https://github.com/EstebanMDQ) [JIM90mdp](https://github.com/JIM90mdp) 
+⭐️ Link to our GitHub profile: [EstebanMDQ](https://github.com/EstebanMDQ) & [JIM90mdp](https://github.com/JIM90mdp) 
 
 
 🤝🏻 Feel free to contact us through:
