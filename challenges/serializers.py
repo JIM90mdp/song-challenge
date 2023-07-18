@@ -10,11 +10,19 @@ class SongIdeaCreateSerializer(serializers.ModelSerializer):
 
 class SongIdeaSerializer(serializers.ModelSerializer):
     content = serializers.SerializerMethodField()
-
+    percussion_name = serializers.CharField(source="percussion.name", read_only=True)
+    bass_name = serializers.CharField(source="bass.name", read_only=True)
+    harmony_name = serializers.CharField(source="harmony.name", read_only=True)
+    melody_name = serializers.CharField(source="melody.name", read_only=True)
+    solo_name = serializers.CharField(source="solo.name", read_only=True)
+    tempo_name = serializers.CharField(source="tempo.name", read_only=True)
+    genre_name = serializers.CharField(source="genre.name", read_only=True)
     class Meta:
         model = SongIdea
-        fields = ["id", "percussion", "bass", "harmony", "melody", "solo", 
-                  "tempo", "genre", "view_count", "like_count", "content"]
+        fields = ["id", "view_count", "like_count", "content", 
+                  "percussion", "bass", "harmony", "melody", "solo", "tempo", "genre", 
+                  "percussion_name", "bass_name", "harmony_name", 
+                  "melody_name", "solo_name", "tempo_name", "genre_name", ]
 
     def get_content(self, obj):
         return str(obj)
