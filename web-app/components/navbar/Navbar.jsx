@@ -13,17 +13,23 @@ const Navbar = () => {
     <div className="navbar">
       {/* <div className="w-screen flex justify-center items-center p-4 dark-green"> */}
       <ul className="navbar_list">
+        <li className="navbar_item">
+          {/* <li className="p-4"> */}
+          <Link href="/" className="navbar_link">
+            Home
+          </Link>
+        </li>
         {/* <ul className="hidden sm:flex"> */}
         <li className="navbar_item">
           {/* <li className="p-4"> */}
           <Link href="/home" className="navbar_link">
-            Home
+            Song-Challenge
           </Link>
         </li>
         <li className="navbar_item">
           {/* <li className="p-4"> */}
           <Link href="/about" className="navbar_link">
-            About Page
+            About
           </Link>
         </li>
       </ul>
@@ -50,16 +56,23 @@ const Navbar = () => {
         // }
       >
         <ul>
-          <li onClick={handleNav} className="mobile-menu--item">
-            {/* <li onClick={handleNav} className="p-4 text-4xl hover:text-gray-500"> */}
-            <Link href="/home" className="navbar_link">
+          <li className="navbar_item">
+            {/* <li className="p-4"> */}
+            <Link href="/" className="navbar_link">
               Home
             </Link>
           </li>
-          <li onClick={handleNav} className="mobile-menu--item">
-            {/* <li onClick={handleNav} className="p-4 text-4xl hover:text-gray-500"> */}
+          {/* <ul className="hidden sm:flex"> */}
+          <li className="navbar_item">
+            {/* <li className="p-4"> */}
+            <Link href="/home" className="navbar_link">
+              Song-Challenge
+            </Link>
+          </li>
+          <li className="navbar_item">
+            {/* <li className="p-4"> */}
             <Link href="/about" className="navbar_link">
-              About Page
+              About
             </Link>
           </li>
         </ul>

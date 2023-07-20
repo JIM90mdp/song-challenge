@@ -135,11 +135,34 @@
 
 .home-container {
   position: absolute;
-  top: 10%;
-  right: 0;
-  width: 50%;
-  height: 70%;
+  right: 10%;
+  width: 40%;
+  padding: 1rem;
 }
+
+/* About */
+
+.about {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./assets/home.jpg");
+  color: #e86035;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-container {
+  position: absolute;
+  right: 10%;
+  width: 40%;
+  font-size: x-large;
+}
+
 
 /* Footer */
 
