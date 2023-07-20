@@ -8,8 +8,8 @@ from rest_framework.response import Response
 from rest_framework import status
 
 from .helpers import generate_random_idea
-from .models import SongIdea, Instrument
-from .serializers import SongIdeaSerializer, SongIdeaCreateSerializer, InstrumentSerializer
+from .models import SongIdea, Instrument, Genre, Tempo
+from .serializers import SongIdeaSerializer, SongIdeaCreateSerializer, InstrumentSerializer, GenreSerializer, TempoSerializer
 
 
 def song_idea(request, pk=None):
@@ -57,3 +57,15 @@ class InstrumentsViewSet(viewsets.ReadOnlyModelViewSet):
 
     queryset = Instrument.objects.filter(is_active=True)
     serializer_class = InstrumentSerializer
+
+
+class GenresViewSet(viewsets.ReadOnlyModelViewSet):
+
+    queryset = Genre.objects.filter(is_active=True)
+    serializer_class = GenreSerializer
+
+
+class TemposViewSet(viewsets.ReadOnlyModelViewSet):
+
+    queryset = Tempo.objects.filter(is_active=True)
+    serializer_class = TempoSerializer
