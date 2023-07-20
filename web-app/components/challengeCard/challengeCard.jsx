@@ -1,15 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import AppContext from "../localStorage/useLocalStorage";
+
 
 const ChallengeCard = ({songChallenge}) => {
-  const [color, setColor] = useState("bg-slate-400");
-
-  const handleState = () => {
-    color === "bg-slate-400"
-      ? setColor("bg-slate-300")
-      : setColor("bg-slate-400");
-  };
 
   return (
     <motion.div
@@ -20,9 +13,11 @@ const ChallengeCard = ({songChallenge}) => {
       variants={{
         hidden: { opacity: 0, x: -50 },
         visible: { opacity: 1, x: 0 },
+        duration: 4,
       }}
     >
       <div id="challengeCard" className="">
+      {/* <div id="challengeCard" className="p-8 text-center text-base"> */}
         <h1 key={songChallenge}>{songChallenge}</h1>
       </div>
     </motion.div>
