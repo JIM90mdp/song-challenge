@@ -36,7 +36,7 @@ $ npm i
 $ npm run dev
 ```
 
-## Technologies Used  (CUALES AGREGARÎAS?)
+## Technologies Used 
 
 - ![JavaScript](https://img.shields.io/badge/-JavaScript-696969?style=flat&logo=javascript)  
 - ![Node.js](https://img.shields.io/badge/-Node.js-696969?style=flat&logo=node.js)  
