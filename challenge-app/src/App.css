@@ -139,7 +139,6 @@ body {
   background-size: cover;
   height: 100vh;
   width: 100vw;
-
   background-image: url("./assets/landing.jpg");
   color: #e86035;
   display: flex;
@@ -225,6 +224,7 @@ body {
   margin: 1rem;
   right: 10%;
   width: 100%;
+  height: 500px;
 }
 
 .challenge-container .btn {
@@ -241,9 +241,25 @@ body {
   border-radius: 8px;
 }
 
+.challenge-container p {
+  color: rgb(232, 232, 232);
+}
+
+.challengeCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .challengeCard img {
   width: 100px;
   height: 100px;
+}
+
+.challengeCard .using {
+  margin: 0;
+  padding: 10px;
 }
 
 .img-container {
@@ -254,15 +270,16 @@ body {
 }
 
 .img-container .image-value {
-  width: 200px;
-  height: 275px;
+  width: 170px;
+  height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: black;
+  color: rgb(232, 232, 232);
   font-size: 20px;
   margin: 1rem;
+  cursor: pointer;
 }
 
 .img-container .image-value h1 {

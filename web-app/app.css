@@ -1,4 +1,7 @@
-/* NavBar */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+}
 
 .navbar {
   position: absolute;
@@ -93,17 +96,29 @@
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  background-image: url("./assets/home.jpg");
   height: 100vh;
   width: 100vw;
-  background-image: url("./assets/Cover.jpg");
   color: #e86035;
   display: flex;
   text-align: center;
   align-items: center;
-  justify-content: center;
 }
 
-.btn {
+.landing-container {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: row;
+  width: 90%;
+  justify-content: space-between;
+  padding: 6rem;
+}
+
+
+.landing .btn {
+  position: absolute;
+  left: 50%;
   background-color: #e86035;
   color: white;
   border: none;
@@ -125,7 +140,8 @@
   background-size: cover;
   height: 100vh;
   width: 100vw;
-  background-image: url("./assets/home.jpg");
+  
+  background-image: url("./assets/landing.jpg");
   color: #e86035;
   display: flex;
   text-align: center;
@@ -134,10 +150,96 @@
 }
 
 .home-container {
-  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px;
+  width: 100%;
+}
+
+.hero {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 50%;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 80px;
+  background-color: #e86035;
+  padding: 0.8rem 3.5rem 0.8rem 3.5rem;
+  font-weight: 700;
+}
+.hero .song-line {
+  margin: 1rem 0 1rem 0;
+  letter-spacing: 5px;
+  font-size: 110px;
+  font-weight: 700;
+}
+.hero .challenge-line {
+  margin: 1rem 0 1rem 0;
+  letter-spacing: 5px;
+  font-size: 110px;
+  font-weight: 700;
+}
+
+.hero .action {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.hero .action h3 {
+  margin: 0;
+  opacity: 0.55;
+}
+.hero .action span {
+  display: flex;
+  flex-direction: row;
+}
+
+.hero .action p {
+  margin: 0;
+}
+
+.hero .action span .orange-background {
+  background-color: #e86035;
+}
+.hero .action span .prompt {
+  opacity: 0.55;
+  padding-left: 1rem;
+}
+
+.challenge-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  margin: 1rem;
   right: 10%;
-  width: 40%;
-  padding: 1rem;
+  width: 50%;
+}
+
+.challenge-container .btn {
+  background-color: #e86035;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
 }
 
 /* About */
@@ -190,3 +292,4 @@ footer p {
 footer .footer_title {
   font-family: "Poppins", sans-serif;
 }
+

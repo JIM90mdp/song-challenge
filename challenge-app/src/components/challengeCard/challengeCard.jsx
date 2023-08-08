@@ -25,46 +25,97 @@ const ChallengeCard = ({ songChallenge }) => {
     return array[randomIndex];
   }
 
-  const items = [];
+  const splitChallenge = songChallenge.content.split(".");
+  const challengeUsing = splitChallenge[1].split(",");
+  console.log("songChallenge.content: ", songChallenge.content);
+  console.log("challengeUsing: ", challengeUsing);
 
-  for (const clave in songChallenge) {
-    if (clave.endsWith("_name")) {
-      items.push(songChallenge[clave]);
-    }
-  }
+  // const items = [];
+
+  // for (const clave in songChallenge) {
+  //   if (clave.endsWith("_name")) {
+  //     items.push(songChallenge[clave]);
+  //   }
+  // }
+
+  const menuVariants = {
+    hidden: {
+      opacity: 0,
+      y: -20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const menuItemVariants = {
+    hidden: {
+      opacity: 0,
+      y: -20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  };
 
   return (
     <motion.div
+      id="challengeCard"
+      className="challengeCard"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}
       transition={{ duration: 0.5 }}
-      variants={{
-        hidden: { opacity: 0, x: -50 },
-        visible: { opacity: 1, x: 0 },
-        duration: 4,
-      }}
+      variants={menuVariants}
     >
-      <div id="challengeCard" className="challengeCard">
-        <h1 key={songChallenge}>{songChallenge.content}</h1>
-        <div className="img-container">
-          {Object.entries(values).map(([key, value], index) => {
-            const randomElement = getRandomElementFromArray(images);
-            const divStyle = {
-              backgroundImage: `url(${randomElement})`,
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-            };
-            return (
-              <div key={index} style={divStyle} className="image-value">
-                <h1>{key}</h1>
-                <p> {value}</p>
-              </div>
-            );
-          })}
-        </div>
-      </div>
+      <h1 key={songChallenge}>{splitChallenge[0]}</h1>
+
+      {challengeUsing.map((u) => (
+        <motion.h2
+        
+          className="using"
+          variants={menuItemVariants}
+          styles={{ marginBottom: "10px" }}
+        >
+          {u}{" "}
+        </motion.h2>
+      ))}
+
+      <motion.div
+        className="img-container"
+        variants={menuVariants}
+        initial="hidden"
+        animate={"visible"}
+      >
+        {Object.entries(values).map(([key, value], index) => {
+          const randomElement = getRandomElementFromArray(images);
+          const divStyle = {
+            backgroundImage: `url(${randomElement})`,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          };
+          return (
+            <motion.button
+              key={index}
+              style={divStyle}
+              className="image-value"
+              variants={menuItemVariants}
+              styles={{ marginBottom: "10px" }}
+            >
+              <h1>{key}</h1>
+              <p> {value}</p>
+            </motion.button>
+          );
+        })}
+      </motion.div>
     </motion.div>
   );
 };
