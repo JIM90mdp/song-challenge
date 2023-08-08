@@ -1,11 +1,11 @@
-FROM node:20-alpine as nextjs_app
+FROM node:20-alpine as react_app
 RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
 WORKDIR /home/node/app
-COPY ./web-app/package*.json ./
+COPY ./challenge-app/package*.json ./
 # USER node
 RUN npm ci
 COPY --chown=node:node . .
-COPY ./web-app /home/node/app
+COPY ./challenge-app /home/node/app
 RUN npm run build
 
 
@@ -32,8 +32,8 @@ RUN set -ex && \
 
 # Copy local project
 COPY . /code/
-COPY --from=nextjs_app /home/node/app/out/* /code/static/
-COPY --from=nextjs_app /home/node/app/out/index.html /code/templates/web-app
+COPY --from=react_app /home/node/app/build/* /code/static/
+COPY --from=react_app /home/node/app/build/index.html /code/templates/web-app
 # Expose port 8000
 EXPOSE 8000
 
