@@ -32,7 +32,7 @@ def get_idea_from_key(percussion_id, bass_id, harmony_id, melody_id, solo_id, te
     except Song.DoesNotExist:
         try:
             song = SongIdea(percussion_id=percussion, bass_id=bass, harmony_id=harmony,
-                            melody_id=id=melody, solo_id=solo, tempo_id=tempo, genre_id=genre)
+                            melody_id=melody, solo_id=solo, tempo_id=tempo, genre_id=genre)
         except:
             pass
     return song
