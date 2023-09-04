@@ -5,11 +5,16 @@
 
 {% block content %}
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <!-- <img src="{% static 'images/logo.png' %}" class="img-fluid" alt="DjangoX logo"/> -->
-  <p class="lead">Click the button below to generate a random song idea.</p>
-  <form action="/song-idea/" method="post">
-    {% csrf_token %}
-    <button type="submit" class="btn btn-primary">Generate Song Idea</button>
-  </form>
+  <!-- <img src="" class="img-fluid" alt="DjangoX logo"/> -->
+  <div id="song">
+    <p class="lead">Click the button below to generate a random song idea.</p>
+    <form action="/song-idea/" method="post" >
+      <!-- hx-post="/song-idea/" hx-target="#song" -->
+      {% csrf_token %}
+      <button type="submit" class="btn btn-primary">Generate Song Idea</button>
+    </form>
+  </div>
 </div>
+
+
 {% endblock content %}

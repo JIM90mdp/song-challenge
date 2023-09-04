@@ -39,6 +39,7 @@ djangorestframework = "^3.14.0"
 markdown = "^3.4.3"
 django-filter = "^23.1"
 django-cors-headers = "^3.14.0"
+django-htmx = "^1.16.0"
 
 
 [build-system]

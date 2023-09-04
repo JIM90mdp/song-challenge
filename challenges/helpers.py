@@ -20,5 +20,19 @@ def generate_random_idea():
         tempo=Tempo.objects.get(pk=random.choice(tempo_pks)),
         genre=Genre.objects.get(pk=random.choice(genre_pks)),
     )
-    song.save()
+    # song.save() do not save the song just yet
+    return song
+
+
+def get_idea_from_key(percussion_id, bass_id, harmony_id, melody_id, solo_id, tempo_id, genre_id):
+    song = None
+    try:
+        song = SongIdea.objects.get(percussion=percussion, bass=bass, harmony=harmony,
+                                    melody=melody, solo=solo, tempo=tempo, genre=genre)
+    except Song.DoesNotExist:
+        try:
+            song = SongIdea(percussion_id=percussion, bass_id=bass, harmony_id=harmony,
+                            melody_id=id=melody, solo_id=solo, tempo_id=tempo, genre_id=genre)
+        except:
+            pass
     return song
