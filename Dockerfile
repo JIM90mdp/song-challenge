@@ -32,8 +32,8 @@ RUN set -ex && \
 
 # Copy local project
 COPY . /code/
-COPY --from=react_app /home/node/app/build/* /code/static/
-COPY --from=react_app /home/node/app/build/index.html /code/templates/web-app
+COPY --from=react_app /home/node/app/out/* /code/static/
+# COPY /code/static/index.html /code/templates/web-app
 # Expose port 8000
 EXPOSE 8000
 
