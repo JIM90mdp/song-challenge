@@ -17,7 +17,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # Create and set work directory called `app`
-RUN mkdir -p /code
+RUN mkdir -p /code/staticfiles
 WORKDIR /code
 
 # Install dependencies
