@@ -17,7 +17,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # Create and set work directory called `app`
-RUN mkdir -p /code
+RUN mkdir -p /code/staticfiles
 WORKDIR /code
 
 # Install dependencies
@@ -32,8 +32,8 @@ RUN set -ex && \
 
 # Copy local project
 COPY . /code/
-COPY --from=react_app /home/node/app/build/* /code/static/
-COPY --from=react_app /home/node/app/build/index.html /code/templates/web-app
+COPY --from=react_app /home/node/app/out/* /code/static/
+# COPY /code/static/index.html /code/templates/web-app
 # Expose port 8000
 EXPOSE 8000
 
